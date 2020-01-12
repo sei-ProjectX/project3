@@ -1,4 +1,6 @@
 .App {
+  display: flex;
+  
   text-align: center;
 }
 
@@ -7,6 +9,38 @@
   pointer-events: none;
 }
 
+body {
+  background-color: #f5f5f5 !important;
+  
+}
+Layout {
+  -webkit-column-count: 4;
+  -moz-column-count: 4;
+  column-count: 4;
+  -webkit-column-gap: 10px;
+  -moz-column-gap: 10px;
+  column-gap: 10px;
+  -webkit-column-rule: 1px solid rgba(28,110,164,0.53);
+  -moz-column-rule: 1px solid rgba(28,110,164,0.53);
+  column-rule: 1px solid rgba(28,110,164,0.53);
+  }
+
+.mainTasks {
+
+  
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 50px;
+    width: 270px;
+    padding: 15px;
+    border-right: 1px dashed #ccc;
+    overflow-y: scroll;
+    transition: left 0.2s ease-out;
+}
+.toDo {
+
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

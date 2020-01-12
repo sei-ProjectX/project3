@@ -1,13 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Category from './components/Category/Category'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+
+
 
 function App() {
+
   return (
+
     <div className="App">
-      <h1>First page </h1>
-    </div>
+
+     
+     <Category>
+
+       
+     </Category>
+
+      </div>
+
+   
   );
 }
 
 export default App;
+
+

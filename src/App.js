@@ -15,8 +15,8 @@ function App() {
     <div className="App">
      
      <Category/>
-
-     <List/>
+      
+         <List/>
        
       
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 
+
 export default class Category  extends Component {
     state = {
         task:" ",
@@ -17,6 +18,13 @@ export default class Category  extends Component {
      })
     }
 
+    submitHandler = (event) => {
+        event.preventDefault()
+         return console.log("sdsadsad");
+        
+       
+    }
+    
 
     
 
@@ -35,10 +43,11 @@ export default class Category  extends Component {
             />
 
             <hr />
-            <input type="submit"/>
+            {/* <input type="submit"/> */}
             </form>
             
             <h4> {this.state.task} </h4>
+            <h5> {this.state.tasks}</h5>
             
             </div>
 

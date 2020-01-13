@@ -1,63 +1,78 @@
 import React,{Component} from 'react'
-
+// import Card from 'react-bootstrap/card'
+// import taskDisplay from '../TasksDisplay/TasksDisplay'
 class Task extends Component {
     state = {
          info:{
              title:"",
              date: '',
-             complaite:false 
+             isChecked:false ,
+             isCompliate:false
          }                                                                                
     }
 
-    handleChange =(event)=>{
-         //anychange on input will apppear here 
-   
-   const userInput = event.target.value
-   const inputName = event.target.name//return stirng , so we used 
-   const infoCopy ={...this.state.info}
-   infoCopy[inputName]=userInput //[]cuz we retrun string 
-//   //set the state with update formdataCopy
-  this.setState({
-    info: infoCopy
-  })
-//console.log (this.state.info)
-     }
+
+
+    handleChange = e => {
+        const key = e.target.name
+        const value = e.target.value
+        this.setState( ({...copyState}) => {
+            if (key === "isChecked"){
+                copyState.info.isChecked = !copyState.info.isChecked
+            }
+            else {
+                copyState.info[key] = value
+            }
+            return copyState
+        })
+    }
 
 
     handleSubmit = (event) =>{
-        // console.log(this.state.info)
+        console.log("handleSubmit")
         event.preventDefault()
-//         console.log(event.target.value)
-    const userInput = event.target.value
-//      console.log(event.target.name)
-    const inputName = event.target.name//return stirng , so we used 
-   const infoCopy ={...this.state.info}
-   infoCopy[inputName]=userInput //[]cuz we retrun string 
-//   //set the state with update formdataCopy
-  this.setState({
-    info: infoCopy
-  })
+        const check = !this.state.isChecked
+        const formData = this.state.info
+        formData.isCompliate = true
+        this.setState({
+            info: formData
+        })
          console.log(this.state.info)
        
   this.setState({ 
     info:{
         title:"",
         date: '',
-        complaite:false 
+        isChecked:false 
           } 
           })
     }
 
 
     render() { 
+        // const taskDisplay = this.state.info.isCompliate ? <TasksDisplay  info={this.state.info}/> : null
+
+        console.log(this.state.info.isChecked)
         return ( 
             <div className="Task">
+                {/* <Card>
+  <Card.Body>This is some text within a card body.</Card.Body>
+</Card> */}
                 <div>
+               
                 <form onSubmit={this.handleSubmit}>
                         <div className="form-example">
-             <input type="checkbox" id="checkbox" name="complaite" value={this.state.info.complaite}onChange={this.handleChange}
+                        <input type="checkbox"
+              id="isChecked"
+              name="isChecked"
+               value={this.state.info.isChecked}
+               onChange={this.handleChange}
                         />
-              <input type="text" name="title" id="title" required value={this.state.info.title} onChange={this.handleChange}/>
+
+              <input type="text" name="title"
+               id="title" required
+                value={this.state.info.title} 
+                onChange={this.handleChange}/>
                         
                             <input type="date" name="date" 
                             value={this.state.info.date} 

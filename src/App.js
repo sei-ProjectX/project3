@@ -10,6 +10,7 @@ function App() {
     <div className="App">
       <Route path="/" component={Nav}/>
       <TasksDispaly></TasksDispaly>
+      <Task/>
     </div>
   );
 }

@@ -1,26 +1,21 @@
 import React, { Component } from 'react';
-
+import Task from '../Task/Task'
 class TasksDispaly extends Component {
-
     state = { 
-        Tasks : [
-         {
-                title:"",
-                date:"",
-                complete:false,
-              
-                // category:""
-            }
-        ]
-     }
-    //  TasksDispaly = (info) => {
+ 
+        }
+
+    //   TasksDisplay = (info) => {
     //     // let title = this.state.title
     //     // console.log(title)
     //     // let date = this.state.date
     //     // console.log(date)
     //     // let complete = this.state.complete
     //     // console.log(complete)
-    //     // let TasksCopy = [...this.state.Tasks]
+        //  let TasksCopy = [...this.state.Tasks]
+        //  Task : {
+
+        //  }
     //     // TasksCopy.map((tc) => {
     //     //     tc.title=info.title,
     //     //     tc.date=info.title,
@@ -34,7 +29,7 @@ class TasksDispaly extends Component {
     //     //  })
     //  }
 
-    
+
     //  TasksDisplay = (info) => {
     //    const TaskCopy =  this.state.Tasks.map((task) => {
     //          return (task.title= info.title, 
@@ -46,25 +41,26 @@ class TasksDispaly extends Component {
          
     
     //  }
- 
-
+// sendData = (info) => {
+//     const formData = this.state.info
+//     this.setState({
+//         info: formData
+//     })
+// }
+   
+    
     render() { 
-        
+         
+        // console.log(this.props.info)
+         const {title:name, date , isChecked } = this.props.info
+
         return ( 
-            <div className="TaskDispaly">
-            <h3>Tasks:</h3>
            
-           {/* {this.state.Tasks.map((task,index) => 
-            { */}
-               {/* //return ( */}
-                    <div>
-                   {this.props.title}
-                {/* <h1 key={index}>{task.title}</h1>
-                <h1>{task.date}</h1>
-                <h1>{task.complete}</h1> */}
-                </div>
-                {/* ) */}
-           {/* })} */}
+            <div className="TaskDispaly">
+                
+                <p>{name}</p>
+                <input type="checkbox" value={isChecked}/>
+                <code>{date}</code>
             </div>
          );
     }

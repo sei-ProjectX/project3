@@ -1,11 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Nav from './components/Nav/Nav'
+import {Route} from 'react-router-dom'
+import TasksDispaly from './components/TasksDisplay/TasksDisplay';
 
 function App() {
   return (
     <div className="App">
-      <h1>First page </h1>
+      <Route path="/" component={Nav}/>
+      <TasksDispaly></TasksDispaly>
     </div>
   );
 }

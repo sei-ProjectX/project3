@@ -1,6 +1,7 @@
 import React,{Component} from 'react'
 // import Card from 'react-bootstrap/card'
 // import taskDisplay from '../TasksDisplay/TasksDisplay'
+
 class Task extends Component {
     state = {
          info:{

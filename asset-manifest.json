@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/sei-ProjectX/project3/static/css/main.d1b05096.chunk.css",
+    "main.js": "/sei-ProjectX/project3/static/js/main.cb16ab3d.chunk.js",
+    "main.js.map": "/sei-ProjectX/project3/static/js/main.cb16ab3d.chunk.js.map",
+    "runtime-main.js": "/sei-ProjectX/project3/static/js/runtime-main.6da8adda.js",
+    "runtime-main.js.map": "/sei-ProjectX/project3/static/js/runtime-main.6da8adda.js.map",
+    "static/js/2.01230b93.chunk.js": "/sei-ProjectX/project3/static/js/2.01230b93.chunk.js",
+    "static/js/2.01230b93.chunk.js.map": "/sei-ProjectX/project3/static/js/2.01230b93.chunk.js.map",
+    "index.html": "/sei-ProjectX/project3/index.html",
+    "precache-manifest.1c4544059f9f9d55db97405933b33c4f.js": "/sei-ProjectX/project3/precache-manifest.1c4544059f9f9d55db97405933b33c4f.js",
+    "service-worker.js": "/sei-ProjectX/project3/service-worker.js",
+    "static/css/main.d1b05096.chunk.css.map": "/sei-ProjectX/project3/static/css/main.d1b05096.chunk.css.map",
+    "static/js/2.01230b93.chunk.js.LICENSE": "/sei-ProjectX/project3/static/js/2.01230b93.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6da8adda.js",
+    "static/js/2.01230b93.chunk.js",
+    "static/css/main.d1b05096.chunk.css",
+    "static/js/main.cb16ab3d.chunk.js"
+  ]
+}

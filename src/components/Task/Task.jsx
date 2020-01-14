@@ -1,7 +1,11 @@
 import React, { Component } from 'react'
-//import Card from 'react-bootstrap/card'
+
 import TasksDisplay from '../TasksDisplay/TasksDisplay'
-//import AllTasks from '../AllTasks/AllTasks'
+
+import { makeStyles } from '@material-ui/core/styles';
+import Input from '@material-ui/core/Input';
+
+
 class Task extends Component {
     state = {
         info: {
@@ -54,38 +58,49 @@ class Task extends Component {
     sendData = () => {
         this.props.sendTasks(this.state.tasks);
    }
+
+    
+
+   
     render() {
         let arr = this.state.tasks
         let sorted = arr.sort((a, b) =>
         a.date.split('-').reverse().join().localeCompare(b.date.split('-').reverse().join()));
         
+        const useStyles = makeStyles(theme => ({
+            root: {
+              '& > *': {
+                margin: theme.spacing(1),
+              },
+            },
+          }));
+
         return (
             <div className="Task">
-       
-                {/* <Card>
-  <Card.Body>This is some text within a card body.</Card.Body>
-</Card> */}
                 <div>
-
-                    <form onSubmit={this.handleSubmit}  >
+    <form 
+    onSubmit={this.handleSubmit}
+    className={useStyles.root} 
+    noValidate autoComplete="off" 
+    >
                     
-                        <div className="form-example">
-                            {/* <input type="checkbox"
-                                id="isChecked"
-                                name="isChecked"
-                                value={this.state.info.isChecked}
-                                onChange={this.handleChange}
-                            /> */}
-
-                            <input type="text" name="title"
+        <div className="form-example">
+  
+                            <Input type="text" name="title"
                                 id="title" required
                                 value={this.state.info.title}
-                                onChange={this.handleChange} />
+                                onChange={this.handleChange} 
+                                placeholder="Enter Your Task" 
+                                inputProps={{ 'aria-label': 'description' }}
+                                />
 
-                            <input type="date" name="date"
+                            <Input type="title" name="date"
                                 value={this.state.info.date}
                                 id="date" required
-                                onChange={this.handleChange} />
+                                onChange={this.handleChange}
+                                placeholder="When"
+                                inputProps={{ 'aria-label': 'description' }}
+                                 />
                         </div>
                         <input type="submit" style={{
                             display: "none"
@@ -110,3 +125,7 @@ class Task extends Component {
 }
 
 export default Task;
+
+
+
+

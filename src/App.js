@@ -6,6 +6,8 @@ import AllTasks from './components/AllTasks/AllTasks';
 //import Task from './components/Task/Task'
 import Category from './components/Category/Category'
 
+
+
 class App extends React.Component {
   state = {
     counter:1,
@@ -16,20 +18,6 @@ class App extends React.Component {
     show5:false,
   }
 
-  // handleAddInput = () => {
-   
-  //   this.setState({
-  //     counter: this.state.counter + 1
-  //   }) 
-  // }
-  // increment = () => {
-  //   if (this.state.counter < 6) {
-  //   this.setState({
-  //     counter: this.state.counter + 1
-      
-  //   }) }
-    
-  //}
   
   delcom = (id) => {
     console.log(id)
@@ -88,10 +76,12 @@ class App extends React.Component {
     <div className="App">
        <div className="col">
       <Route path="/" component={Nav}/>
+      {/* <Route path="/" component={Home}/> */}
+      
       {/* <AllTasks></AllTasks> */}
       {this.state.show1?
         <div>
-        <Category ></Category>  
+          <Category/>   
         <button id="2" onClick={() => this.showcom('1')}>add</button> 
         </div>
             : ''}
@@ -122,10 +112,7 @@ class App extends React.Component {
         <button onClick={() =>this.delcom('5')}>D</button> 
         </div>
             : ''}
-      {/* {this.state.show3?<Category id="3" add={this.showcom} delete={this.deletecom}></Category> : null}
-      {this.state.show4?<Category id="4" add={this.showcom} delete={this.deletecom}></Category> : null}
-      {this.state.show5?<Category id="5" add={this.showcom} delete={this.deletecom}></Category> : null}
-      */}
+
       </div> 
     </div>
   );

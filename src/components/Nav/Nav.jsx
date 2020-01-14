@@ -1,12 +1,15 @@
 import React from 'react';
 import {Link} from 'react-router-dom'
+import './Nav.css';
 
 function Nav() {
     return (
-      <div className="App">
-        <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/api">api</Link>
+      <div className="nav">
+     
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/about">About</Link></li>
+         <li><Link to="/Events">Events</Link></li>
+     
       </div>
     );
   }

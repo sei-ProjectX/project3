@@ -1,0 +1,9 @@
+.nav{
+    background-color:lavender;
+    margin-right: 10px;
+}
+.nav li {
+    list-style-type: none;
+    text-align: center;
+    padding: 10px;  
+}

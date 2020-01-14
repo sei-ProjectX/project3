@@ -29,7 +29,7 @@ class TasksDispaly extends Component {
               margin: theme.spacing(1),
             },
           }));
-          const classes = useStyles();
+         
 
         return ( 
            
@@ -47,7 +47,7 @@ class TasksDispaly extends Component {
                  onClick={()=> this.props.deleteTask(title)} 
                  variant="contained"
                  color="secondary"
-                 className={classes.button}
+                 className={useStyles.button}
                  > 
                  Delete
                  </Button>

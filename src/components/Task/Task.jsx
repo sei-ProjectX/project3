@@ -1,9 +1,8 @@
 import React, { Component } from 'react'
-
 import TasksDisplay from '../TasksDisplay/TasksDisplay'
-
 import { makeStyles } from '@material-ui/core/styles';
 import Input from '@material-ui/core/Input';
+
 
 
 class Task extends Component {
@@ -102,6 +101,8 @@ class Task extends Component {
                                 inputProps={{ 'aria-label': 'description' }}
                                  />
                         </div>
+
+
                         <input type="submit" style={{
                             display: "none"
                         }} />

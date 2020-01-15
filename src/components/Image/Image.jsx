@@ -17,49 +17,48 @@ class Image extends Component {
     //  }
     
     render() { 
-
+        console.log(this.state.Img)
         return ( 
         <div className="Image">
-
+{/* <img src={require('../../Images/bookmark-white.svg')} 
+alt="Home" width="40" height="20" 
+onClick={() => this.handleclick(vanue)}/> */}
+        {this.state.Img ? <img src={this.state.Img} /> : null}
+        <img src={this.state.Img} />
+        <img src="https://images.pexels.com/photos/3467150/pexels-photo-3467150.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
+        <hr />
         </div>
                 
                
                
        );
     }
-    apifnction = (name) => {
-        console.log('api')
-        console.log(name)
-        this.setState({
-            venues: []
-        }) 
-        const Venue={
-            name:"",
-            address:"",
-            catgeroy:""
-        }
-        //let venuesCopy=[]
-       // const baseUrl=(`https://api.foursquare.com/v2/venues/explore?ll=24.774265,%2046.738586&near=riyadh,Sa&client_id=VGGSYE2LQEBOVDWZA5ZGPGUVO2ZDYZVWOSQQSIDUETSW5BVZ&client_secret=BVWBVFWBKKNQBM251FZAODKF24WAXYFURTSEI3NNDG1JED0G&v=20200101`)
-        axios.get(`https://api.foursquare.com/v2/venues/explore?near=${name},Sa&client_id=VGGSYE2LQEBOVDWZA5ZGPGUVO2ZDYZVWOSQQSIDUETSW5BVZ&client_secret=BVWBVFWBKKNQBM251FZAODKF24WAXYFURTSEI3NNDG1JED0G&v=20200101`)
+componentDidMount = (e)=>{
+        axios.get(this.props.img)
         .then(response => {
             console.log(response)
-            const res = response.data.response.groups
-            res.forEach((group)=>{
-                (group.items.forEach((item)=>{
-                    console.log(item)
-                    Venue.name = item.venue.name
-                    Venue.address = item.venue.location.address
-                    Venue.catgeroy = item.venue.categories[0].name
-                    
-                    this.state.venues.push({...Venue})   
-                }))   
-                // console.log(this.state.venues)
+
+           
+            console.log('response')
+            console.log(response)
+             const res = response.data.response.photos.items
+             res.forEach((item)=>{
+            const { prefix, suffix } = item
+            
+            this.setState( ({...copyState}) => {
+                copyState.Img = `${prefix}200${suffix}`
+            })
+
+        
                 })
         })
+        .catch(
+            err => console.error(err)
+        )
         
-        // .then(()=> {
-        //  //   this.setState({venues: venuesCopy})
-        // }).catch(err=> err.message)
+        // })
+        
+     
     }
 }
  

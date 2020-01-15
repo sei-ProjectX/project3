@@ -41,7 +41,7 @@ class Task extends Component {
 
 
     handleSubmit = (event) => {
-        event.preventDefault()
+        
         this.sendData()
         this.setState( ({...copyState}) => {
             copyState.tasks.push(copyState.info)

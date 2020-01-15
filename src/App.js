@@ -11,7 +11,7 @@ function App() {
     <div className="App">
       <Route path="/" component={Nav}/>
       <TasksDispaly></TasksDispaly>
-      <Task/>
+      {/* <Task/> */}
      <City/>
     </div>
   );

@@ -73,7 +73,7 @@ deleteBookmarks = (venue) => {
     }
     
    // const baseUrl=(`https://api.foursquare.com/v2/venues/explore?ll=24.774265,%2046.738586&near=riyadh,Sa&client_id=VGGSYE2LQEBOVDWZA5ZGPGUVO2ZDYZVWOSQQSIDUETSW5BVZ&client_secret=BVWBVFWBKKNQBM251FZAODKF24WAXYFURTSEI3NNDG1JED0G&v=20200101`)
-    axios.get(`https://api.foursquare.com/v2/venues/explore?near=${name},Sa&client_id=VGGSYE2LQEBOVDWZA5ZGPGUVO2ZDYZVWOSQQSIDUETSW5BVZ&client_secret=BVWBVFWBKKNQBM251FZAODKF24WAXYFURTSEI3NNDG1JED0G&v=20200101`)
+    axios.get(`https://api.foursquare.com/v2/venues/explore?near=${name},Sa&client_id=DZ3JEIQB3WJ5WWUZDC2SWVBAKCA2CAJ5C0VZMMPKZ2ZZNKKO&client_secret=2YGHPCI5LN1PTRNNLRQ5SZGBZIXUUC3R0QMA50LA1Y4QENYW&v=20200101`)
     .then(response => {
         let venuesCopy=[]
         console.log(response)
@@ -82,7 +82,7 @@ deleteBookmarks = (venue) => {
             (group.items.forEach((item)=>{
                 console.log(item.venue.id)
                 const id = item.venue.id
-                Venue.image = `https://api.foursquare.com/v2/venues/${id}/photos?client_id=VGGSYE2LQEBOVDWZA5ZGPGUVO2ZDYZVWOSQQSIDUETSW5BVZ&client_secret=BVWBVFWBKKNQBM251FZAODKF24WAXYFURTSEI3NNDG1JED0G&v=20201001`
+                //Venue.image = `https://api.foursquare.com/v2/venues/${id}/photos?client_id=DZ3JEIQB3WJ5WWUZDC2SWVBAKCA2CAJ5C0VZMMPKZ2ZZNKKO&client_secret=DZ3JEIQB3WJ5WWUZDC2SWVBAKCA2CAJ5C0VZMMPKZ2ZZNKKO&client_secret=2YGHPCI5LN1PTRNNLRQ5SZGBZIXUUC3R0QMA50LA1Y4QENYWG&v=20201001`
                 Venue.name = item.venue.name
                 Venue.address = item.venue.location.address
                 Venue.catgeroy = item.venue.categories[0].name

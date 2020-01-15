@@ -7,6 +7,10 @@ padding: 10px 5px;
 margin-top:20px;
 
 }
+.bookmarks h3 {
+font-family: 'Ibarra Real Nova', serif;  
+}
+
 .content {
     display: flex;
 justify-content: space-around;

@@ -27,9 +27,7 @@ align-content: center;
 .city h3 {
     font-family: 'Ibarra Real Nova', serif;
 }
-.city p {
-    color: gray;
-}
+
 .venues {
     display: flex;
     flex-flow: column;

@@ -8,7 +8,7 @@ class City extends Component {
         venues:[],
         city:'',
         bookmarks:[],
-        bookmarkclicked:false
+        iscityClick: false
      }
 
      handleclick =(vanue) => {
@@ -46,17 +46,20 @@ deleteBookmarks = (venue) => {
    }
 
    handleChange = (city) => {
+    
    //const value = e.target.value
     let copycity = {...this.state.city}
     //console.log(value)
     copycity=city
     this.apifnction(copycity)
     this.setState({
-        city:copycity
+        city:copycity,
+        iscityClick:true
     })
  }
 
  apifnction = (name) => {
+     
     console.log('api')
     console.log(name)
     this.setState({
@@ -94,7 +97,7 @@ deleteBookmarks = (venue) => {
    
 }
     render() { 
-        let BookmarkImage = this.state.bookmarkclicked ? '../../Images/bookmark.svg' : '../../Images/bookmark-white.svg'
+      
         const cities = ['Riyadh','Jeddah','Abha','Hail','Khobar','Madinah','Mekkah']
         return ( 
             <div className="col">
@@ -112,13 +115,14 @@ deleteBookmarks = (venue) => {
                 })
             }
             </div>
-            {this.state.venues.map((venue) => { return (
+          {  this.state.iscityClick ? 
+            this.state.venues.map((venue) => { return (
                 <div>
                 <Venue venue={venue} ></Venue>
             <div className="info">
             <img src={require('../../Images/bookmark-white.svg')} alt="Home" width="40" height="20" onClick={()=>this.handleclick(venue.name)}/></div>
             <hr/></div> )     
-            })}     
+            }) : ''}  
         </div> 
         </div>
         );

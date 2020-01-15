@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Venue.css'
 class Venue extends Component {
     state = {  }
    
@@ -11,8 +12,8 @@ class Venue extends Component {
        
             <div>
                    <h3>{this.props.venue.name}</h3>
-                   <p>Address:{this.props.venue.address}</p>
-                    <p>Category:{this.props.venue.catgeroy}</p>
+                   <p>Address: {this.props.venue.address}</p>
+                    <p>Category: {this.props.venue.catgeroy}</p>
                     
             
           

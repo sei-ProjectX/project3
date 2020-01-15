@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
 import TasksDisplay from '../TasksDisplay/TasksDisplay'
-import { makeStyles } from '@material-ui/core/styles';
-import Input from '@material-ui/core/Input';
-
-
+//import AllTasks from '../AllTasks/AllTasks'
 
 class Task extends Component {
     state = {
@@ -12,7 +9,8 @@ class Task extends Component {
             date: '',
            // isChecked: false
         },
-        tasks:[]
+        tasks:[],
+        show:false
     }
 
 
@@ -42,7 +40,7 @@ class Task extends Component {
 
 
     handleSubmit = (event) => {
-        event.preventDefault()
+        
         this.sendData()
         this.setState( ({...copyState}) => {
             copyState.tasks.push(copyState.info)
@@ -57,10 +55,12 @@ class Task extends Component {
     sendData = () => {
         this.props.sendTasks(this.state.tasks);
    }
-
-    
-
+    picktime = () => {
    
+    this.setState({
+      show: !this.state.show
+    }) 
+  }
     render() {
         let arr = this.state.tasks
         let sorted = arr.sort((a, b) =>
@@ -88,18 +88,15 @@ class Task extends Component {
                             <Input type="text" name="title"
                                 id="title" required
                                 value={this.state.info.title}
-                                onChange={this.handleChange} 
-                                placeholder="Enter Your Task" 
-                                inputProps={{ 'aria-label': 'description' }}
-                                />
-
-                            <Input type="title" name="date"
+                                onChange={this.handleChange} />
+                            {this.state.show? 
+                            <input type="date" name="date"
                                 value={this.state.info.date}
                                 id="date" required
-                                onChange={this.handleChange}
-                                placeholder="When"
-                                inputProps={{ 'aria-label': 'description' }}
-                                 />
+                                onChange={this.handleChange}/>
+                                : 
+                                null}
+                                <img src={require('../../Images/time-and-date.svg')} alt="date" width="30" height="15" onClick={this.picktime}/>
                         </div>
 
 

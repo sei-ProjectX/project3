@@ -44,16 +44,10 @@ render() {
 
        
        
-return (
-            
-    <div className = "Task"> 
-    <form  onSubmit={this.submitHandler} 
-    className={useStyles.root} 
-    noValidate autoComplete="off" > 
-  
-            <Input
-            id="standard-basic" 
-            label="Standard"
+        return (
+            <div className = "Task"> 
+            {/* <form  onSubmit={this.submitHandler}> 
+            <input
             type = "text"
             name = "task"
             placeholder="Placeholder" 
@@ -63,12 +57,15 @@ return (
             value = {this.state.task}
             onChange = {this.changeHandler}
             />
+            </form> */}
              {/* <button onClick={()=> this.props.delete(this.props.id)}>D</button> 
              <button onClick={()=> this.props.add(this.props.id)}>add</button>  */}
+            
             {/* <input type="submit"/> */}
-    </form>  
-            <Task sendTasks={this.sendTasks}></Task>
+              
+            
             {/* <p> {this.state.tasks} </p> */}
+            {this.props.favs.map((fav) => <h3>{fav}</h3>)}
             </div>
 
 

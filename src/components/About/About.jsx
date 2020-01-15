@@ -63,35 +63,39 @@ export default function SignInSide() {
       <Grid item xs={false} sm={4} md={7} className={classes.image} />
       <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
         <div className={classes.paper}>
-        <Typography component="h1" variant="h5">
-        
-          </Typography>
-
-          <form className={classes.form} noValidate>
           <Typography component="h1" variant="h5">
-          Discover Things Around you
+          About Us
           </Typography>
           <Typography component="h6" variant="h10">
           this project is designed for general assembly bootcamp that was taken in 2020,
           feel free to use any of source 
           </Typography>
-          <LinkTwo to="/Explore">
-            { <Button
+          <form className={classes.form} noValidate>
+          <LinkTwo to="/">
+            {/* <Button
               type="submit"
               fullWidth
               variant="contained"
               color="primary"
               className={classes.submit}
             >
-             Get started
-            </Button> }
+             Get Started
+            </Button> */}
             </LinkTwo>
             <Grid container>
               <Grid item xs>
-               
+                {/* <Link href="#" variant="body2">
+                  Forgot password?
+                </Link> */}
               </Grid>
             </Grid>
-            
+            <Typography component="h6" variant="h10">
+            <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+             alt="GitHub" 
+             height="100"
+             width="100"></img> 
+            <img src=" https://www.nicepng.com/png/full/205-2057070_general-assembly-icon.png" alt="GA" height="80" width="80"></img>
+          </Typography>
           </form>
         </div>
       </Grid>

@@ -1,0 +1,18 @@
+.bookmarks {
+background-color:white;
+border: 1px solid gray;
+font-size: 14px;
+width: 20%;
+padding: 10px 5px;
+margin-top:20px;
+
+}
+.bookmarks h3 {
+font-family: 'Ibarra Real Nova', serif;  
+}
+
+.content {
+    display: flex;
+justify-content: space-around;
+padding:10px;
+}

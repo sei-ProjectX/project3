@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Ibarra+Real+Nova&display=swap');
+.rbtn{
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+background-color:#484B47;
+align-content: center;
+}
+.rbtn p {
+    align-self: center;
+    color: white;
+    padding-top: 15px;
+    font-weight: 700;
+    font-size: 20px;
+    
+}
+.city {
+    display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin: 20px;
+  background-color: #FFFFFf;
+  border: 1px solid #999;
+  width: 70%;
+
+}
+.city h3 {
+    font-family: 'Ibarra Real Nova', serif;
+}
+.city p {
+    color: gray;
+}
+.venues {
+    display: flex;
+    flex-flow: column;
+    text-align: left;
+    padding: 10px;
+    margin-right:20px;
+}
+.venues li {
+    font-size: 22px;
+    color:#515052;
+    list-style-type: none;
+}
+.info{
+    display:flex;
+    justify-content: flex-end;
+}

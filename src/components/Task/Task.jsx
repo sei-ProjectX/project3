@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 //import Card from 'react-bootstrap/card'
 import TasksDisplay from '../TasksDisplay/TasksDisplay'
 //import AllTasks from '../AllTasks/AllTasks'
+
 class Task extends Component {
     state = {
         info: {
@@ -9,7 +10,8 @@ class Task extends Component {
             date: '',
            // isChecked: false
         },
-        tasks:[]
+        tasks:[],
+        show:false
     }
 
 
@@ -54,6 +56,12 @@ class Task extends Component {
     sendData = () => {
         this.props.sendTasks(this.state.tasks);
    }
+    picktime = () => {
+   
+    this.setState({
+      show: !this.state.show
+    }) 
+  }
     render() {
         let arr = this.state.tasks
         let sorted = arr.sort((a, b) =>
@@ -81,11 +89,14 @@ class Task extends Component {
                                 id="title" required
                                 value={this.state.info.title}
                                 onChange={this.handleChange} />
-
+                            {this.state.show? 
                             <input type="date" name="date"
                                 value={this.state.info.date}
                                 id="date" required
-                                onChange={this.handleChange} />
+                                onChange={this.handleChange}/>
+                                : 
+                                null}
+                                <img src={require('../../Images/time-and-date.svg')} alt="date" width="30" height="15" onClick={this.picktime}/>
                         </div>
                         <input type="submit" style={{
                             display: "none"

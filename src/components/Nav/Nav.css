@@ -1,8 +1,31 @@
-.nav{
-    background-color:lavender;
-    margin-right: 10px;
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap');
+.header{
+    background-color:#3F51B5;
+    color:white;
+    font-weight: 700;
+    text-align: left;
+    font-family: 'Kaushan Script', cursive;
+    padding: 10px 25px;
 }
+.nav{
+    background-color:#3F51B5;
+    height: 60px;
+    display: flex;
+    justify-content:left;
+    border-bottom: black;
+    
+}
+.nav a {
+    color: #fff;
+    font-size:23px;
+    text-decoration: none;
+}
+.nav a:hover {
+    text-decoration: none;
+    color: white;
+  }
 .nav li {
+    margin-left: 20px;
     list-style-type: none;
     text-align: center;
     padding: 10px;  

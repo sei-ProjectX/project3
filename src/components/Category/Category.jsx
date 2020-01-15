@@ -30,7 +30,7 @@ export default class Category  extends Component {
        
         return (
             <div className = "Task"> 
-            <form  onSubmit={this.submitHandler}> 
+            {/* <form  onSubmit={this.submitHandler}> 
             <input
             type = "text"
             name = "task"
@@ -39,13 +39,15 @@ export default class Category  extends Component {
             value = {this.state.task}
             onChange = {this.changeHandler}
             />
+            </form> */}
              {/* <button onClick={()=> this.props.delete(this.props.id)}>D</button> 
              <button onClick={()=> this.props.add(this.props.id)}>add</button>  */}
-            <hr />
+            
             {/* <input type="submit"/> */}
-            </form>  
-            <Task sendTasks={this.sendTasks}></Task>
+              
+            
             {/* <p> {this.state.tasks} </p> */}
+            {this.props.favs.map((fav) => <h3>{fav}</h3>)}
             </div>
 
 

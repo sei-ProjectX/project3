@@ -8,16 +8,10 @@ class Venue extends Component {
           
         return ( 
             <div className="venues">
-           
-       
-            <div>
                    <h3>{this.props.venue.name}</h3>
+                   <p>{this.props.venue.catgeroy}</p>
                    <p>Address: {this.props.venue.address}</p>
-                    <p>Category: {this.props.venue.catgeroy}</p>
                     
-            
-          
-            </div>
       </div>
          );
     }

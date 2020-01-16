@@ -1,18 +1,26 @@
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+Great+Primer+SC&display=swap');
 .bookmarks {
-background-color:white;
-border: 1px solid gray;
-font-size: 14px;
-width: 20%;
-padding: 10px 5px;
-margin-top:20px;
-
-}
-.bookmarks h3 {
-font-family: 'Ibarra Real Nova', serif;  
-}
-
-.content {
-    display: flex;
-justify-content: space-around;
-padding:10px;
-}
+    background-color:white;
+    border: 1px solid gray;
+    font-size: 14px;
+    width: 20%;
+    margin-top:20px;
+    position: fixed;
+    z-index: 1;
+    top: 180px;
+    left: 10px;
+    overflow-x: hidden;
+    height:70%
+    }
+    .bookmarks h3 {
+    color: #2c786c;
+    padding: 15px;
+    font-family: 'IM Fell Great Primer SC', serif; 
+    }
+    
+    .content {
+        display: flex;
+    justify-content: space-around;
+    padding:10px;
+    border-bottom: 1px solid gray;
+    }

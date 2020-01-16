@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Ibarra+Real+Nova&display=swap');
+
+.about{
+    margin: 20px 40px;
+}
+.about h1{
+    color : rgb(46, 95, 58);
+    font-family: 'Kaushan Script', cursive;
+    
+}
+.about h5 {
+    font-family: 'Ibarra Real Nova', serif;
+}

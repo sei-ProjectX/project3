@@ -1,4 +1,5 @@
 import React from 'react';
+import './About.css';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -15,6 +16,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Link as LinkTwo } from 'react-router-dom'
 function Copyright() {
   return (
+   
     <Typography variant="body2" color="textSecondary" align="center">
       {'Copyright © '}
       <Link color="inherit" href="https://material-ui.com/">
@@ -58,17 +60,20 @@ const useStyles = makeStyles(theme => ({
 export default function SignInSide() {
   const classes = useStyles();
   return (
+      
+    <div className="about">
+        
     <Grid container component="main" className={classes.root}>
       <CssBaseline />
       <Grid item xs={false} sm={4} md={7} className={classes.image} />
       <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
         <div className={classes.paper}>
           <Typography component="h1" variant="h5">
-          About Us
+          <h1>About Us</h1>
           </Typography>
           <Typography component="h6" variant="h10">
-          this project is designed for general assembly bootcamp that was taken in 2020,
-          feel free to use any of source 
+          <h5>this project is designed for general assembly bootcamp that was taken in 2020,
+          feel free to use any of source </h5>
           </Typography>
           <form className={classes.form} noValidate>
           <LinkTwo to="/">
@@ -100,5 +105,6 @@ export default function SignInSide() {
         </div>
       </Grid>
     </Grid>
+    </div>
   );
 }

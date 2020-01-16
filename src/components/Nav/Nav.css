@@ -1,18 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap');
 .header{
-    background-color:#3F51B5;
+    background-color:#d5c455;
     color:white;
     font-weight: 700;
     text-align: left;
     font-family: 'Kaushan Script', cursive;
     padding: 10px 25px;
+    
 }
 .nav{
-    background-color:#3F51B5;
+    background-color:#d5c455;
     height: 60px;
     display: flex;
     justify-content:left;
     border-bottom: black;
+    margin-bottom: 20px;
     
 }
 .nav a {
@@ -27,6 +29,8 @@
 .nav li {
     margin-left: 20px;
     list-style-type: none;
+    font-family: 'Ibarra Real Nova', serif;
     text-align: center;
     padding: 10px;  
 }
+

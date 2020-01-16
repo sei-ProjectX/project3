@@ -5,35 +5,49 @@ flex-direction: row;
 justify-content: space-evenly;
 background-color:#484B47;
 align-content: center;
+
 }
 .rbtn p {
     align-self: center;
     color: white;
-    padding-top: 15px;
+    padding: 15px;
     font-weight: 700;
-    font-size: 20px;
-    
+    font-size: 20px; 
+   
+}
+.rbtn table {
+    background-color:white;
+    color: #484B47;
+    font-size: 24px;
+    font-weight: 700;  
+    font-family: 'Ibarra Real Nova', serif;
+   
 }
 .city {
     display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  margin: 20px;
+  margin-left: 160px;
   background-color: #FFFFFf;
   border: 1px solid #999;
   width: 70%;
-
 }
 .city h3 {
     font-family: 'Ibarra Real Nova', serif;
 }
-
+.venuedisplay {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-top:15px;
+}
+#color{
+    color:#3F51B5;
+}
 .venues {
     display: flex;
     flex-flow: column;
-    text-align: left;
-    padding: 10px;
-    margin-right:20px;
+    text-align: left;   
 }
 .venues li {
     font-size: 22px;
@@ -43,4 +57,5 @@ align-content: center;
 .info{
     display:flex;
     justify-content: flex-end;
+    padding-top: 10px;
 }

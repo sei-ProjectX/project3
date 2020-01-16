@@ -1,4 +1,5 @@
 import React from 'react';
+import './Home.css'
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
 import CssBaseline from '@material-ui/core/CssBaseline';
@@ -31,14 +32,14 @@ const useStyles = makeStyles(theme => ({
   },
   image: {
     backgroundImage: 'url(https://source.unsplash.com/random)',
-    backgroundRepeat: 'no-repeat',
+    backgroundRepeat: 'repeat',
     backgroundColor:
       theme.palette.type === 'dark' ? theme.palette.grey[900] : theme.palette.grey[50],
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   },
   paper: {
-    margin: theme.spacing(8, 4),
+    margin: theme.spacing(8,4),
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -58,22 +59,22 @@ const useStyles = makeStyles(theme => ({
 export default function SignInSide() {
   const classes = useStyles();
   return (
+      <div className="home">
     <Grid container component="main" className={classes.root}>
       <CssBaseline />
       <Grid item xs={false} sm={4} md={7} className={classes.image} />
       <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
         <div className={classes.paper}>
-        <Typography component="h1" variant="h5">
-        
-          </Typography>
-
           <form className={classes.form} noValidate>
+          <br/><br/><br/><br/><br/><br/>
           <Typography component="h1" variant="h5">
-          Discover Things Around you
+          <h1 ><strong>Explore</strong></h1>
+          </Typography>
+          <Typography component="h1" variant="h5">
+          <h3>Discover Places Around you</h3>
           </Typography>
           <Typography component="h6" variant="h10">
-          this project is designed for general assembly bootcamp that was taken in 2020,
-          feel free to use any of source 
+          <h5>Find the best places to visit in any city in Saudi Arabia.</h5>
           </Typography>
           <LinkTwo to="/Explore">
             { <Button
@@ -96,5 +97,6 @@ export default function SignInSide() {
         </div>
       </Grid>
     </Grid>
+    </div>
   );
 }
